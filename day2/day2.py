@@ -9,13 +9,8 @@ for s in a:
 	if 3 in d: count3 += 1
 print(count2 * count3)
 
-a.sort()
-i = -1
-c = 0
-while c != 1:
-	i += 1
-	d = [x for x in range(len(a[i])) if a[i][x] != a[i+1][x]]
-	c = len(d)
-print(a[i])
-print(a[i+1])
-print(a[i][:d[0]],a[i][d[0]+1:])
+for s1,s2 in ((s1,s2) for s1 in a for s2 in a):
+    common = [c1 for c1,c2 in zip(s1,s2) if c1 == c2]
+    if len(common) == len(s1)-1:
+        print(''.join(common))
+        quit()
