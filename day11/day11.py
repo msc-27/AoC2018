@@ -29,4 +29,4 @@ for s in range(300): # for each square size (s = size-1)
                 maxy = y
                 maxs = s
                 print(maxx,maxy,maxs+1,maxp) # best so far
-# For part 1, examine the output for s=2 (row 6)
+# For part 1, examine the last output for size 2
